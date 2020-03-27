@@ -1,5 +1,11 @@
 #!/usr/bin/python
 import argparse
+
+# The libraries are located one level above the scripts folder
+currentdir = os.path.dirname(os.path.realpath(__file__))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0,parentdir)
+
 import google_cloudresourcemanager_utils as cloudResourceManagerUtils
 import google_constants as constants
 

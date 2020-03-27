@@ -5,16 +5,24 @@
 # can report on Google Managed or User Managed Service Acccounts
 #
 import argparse
-import google_cloudresourcemanager_utils as resourceManagerUtils
-import googleapiclient
-import google_constants as constants
 from googleapiclient.errors import HttpError
 from googleapiclient import discovery
 from oauth2client.client import GoogleCredentials
 import os.path
 import sys
-
 from pprint import pprint # Useful for printing out resources in full, e.g. pprint(key)
+
+# The libraries are located one level above the scripts folder
+currentdir = os.path.dirname(os.path.realpath(__file__))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0,parentdir)
+
+import google_cloudresourcemanager_utils as resourceManagerUtils
+import googleapiclient
+import google_constants as constants
+
+
+
 
 debug = False
 #debug = True
