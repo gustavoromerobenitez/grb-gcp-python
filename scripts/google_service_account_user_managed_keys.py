@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/usr/bin/python
 
 #
 # Report on service accounts in projects
@@ -23,9 +23,7 @@ import google_constants as constants
 
 
 
-
 debug = False
-#debug = True
 
 
 # [START run]

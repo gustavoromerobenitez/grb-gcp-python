@@ -7,7 +7,6 @@ from oauth2client.client import GoogleCredentials
 from google.cloud import bigquery
 from googleapiclient import discovery
 
-# Unit tests are supposed to be under the subdirectory tests/unit
 # The common utils library is supposed to be located at the root of that path
 # This is needed to find the google_resourcemanager_common_utils module since this Unit test is not within the same module
 currentdir = os.path.dirname(os.path.realpath(__file__))

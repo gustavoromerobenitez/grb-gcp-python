@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 #
 # pip install --upgrade google-api-python-client
 # to run:
@@ -30,7 +30,6 @@ from oauth2client.client import GoogleCredentials
 
 #
 # The common resourcemanager_utils library is supposed to be located in the parent directory
-# Ideally all common function should be moved there to simplify future scripts
 # This is needed to find the resourcemanager_utils module since it is not within the same module
 #
 import inspect
@@ -462,11 +461,8 @@ def get_compute_instances():
 
     api_service = compute_utils.compute_get_api_client().instances()
     for project in projects:
-#        print(project['projectId'])
         zones = get_zones(project['projectId'])
-#        print(zones)
         for zone in zones:
-#            print(zone)
             request = api_service.list(project=project['projectId'], zone=zone)
             while request is not None:
                 try:

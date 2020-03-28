@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 #
 # Given a GSuite group name, return the list of usernames in OS login format
 #
